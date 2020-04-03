@@ -53,7 +53,7 @@ class RegisterPage extends React.Component {
       <Container>
             <Card>
                 <Card.Header as="h2">
-                    Rejestracja
+                    New Account
                 </Card.Header>
                 <Card.Body>
                     <Form
@@ -113,7 +113,7 @@ class RegisterPage extends React.Component {
                         <Form.Group controlId="formGroupPasswordRepeat">
                         <Form.Control
                             type="password"
-                            placeholder="Powtórz hasło"
+                            placeholder="Repeat password"
                             value={passwordR}
                             name="passwordR"
                             onChange={e => onChange(e)}

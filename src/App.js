@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import RegisterPage from './RegisterPage/RegisterPage'
+import RegisterPage from './RegisterPage/RegisterPage';
+import MenuCard from './containers/MenuCard';
+import './Styles/global.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
