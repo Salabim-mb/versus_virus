@@ -1,10 +1,10 @@
 .MenuCard_header {
-    background-color: #046EF7;
-
+    background-color: #eeaaaa;
 }
 
 .MenuCard_body {
     background-color: rgba(91, 91, 91, 0.5);
+    color: azure;
 }
 
 .MenuBoard_button_close {

@@ -1,6 +1,6 @@
 import React from "react";
-import {Card, Container} from 'react-bootstrap';
-import Button from "react-bootstrap/Button";
+import {Card, Container, Button} from 'react-bootstrap';
+import "./MenuCard.css";
 
 const MenuCard = ({title, body, hide}) => (
     <Container className="MenuCard_container">
