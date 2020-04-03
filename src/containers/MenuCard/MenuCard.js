@@ -1,7 +1,7 @@
 import React from "react";
 import {Card, Container} from 'react-bootstrap';
 import "./MenuCard.css";
-import BackButton from "containers/BackButton";
+import BackButton from "../BackButton";
 
 class MenuCard extends React.Component {
   render() {
