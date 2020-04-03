@@ -1,15 +1,16 @@
 .MenuCard_header {
-    background-color: #eeaaaa;
+    display: block;
+    background-color: #ccaaaa !important;
 }
 
 .MenuCard_body {
-    background-color: rgba(91, 91, 91, 0.5);
+    background-color: rgba(77, 77, 77, 0.5);
     color: azure;
 }
 
 .MenuBoard_button_close {
     display: inline-block;
-    justify-content: end !important;
+    justify-self: end !important;
 }
 
 @media(max-width: 768px) {
