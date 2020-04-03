@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 import MenuCard from "../../containers/MenuCard";
 
 class RegisterPage extends React.Component {
@@ -90,7 +90,10 @@ class RegisterPage extends React.Component {
                             />
                         </Form.Group>
                         <Form.Group controlId="formGroupPassword">
+                        <Row>
+                            <Col>
                         <Form.Control
+                            inline
                             type="password"
                             autoComplete="on"
                             placeholder="Password"
@@ -100,14 +103,12 @@ class RegisterPage extends React.Component {
                             required
                             minLength="6"
                             maxLength="30"
+                            
                         />
-
-                        <Form.Control.Feedback type="invalid">
-                            Minimum 6 characters
-                        </Form.Control.Feedback>
-                        </Form.Group>
-                        <Form.Group controlId="formGroupPasswordRepeat">
+                        </Col>
+                        <Col>
                         <Form.Control
+                            inline
                             type="password"
                             placeholder="Repeat password"
                             value={passwordR}
@@ -115,10 +116,11 @@ class RegisterPage extends React.Component {
                             onChange={e => onChange(e)}
                             required
                             minLength="6"
+                            
                         />
-                        <Form.Control.Feedback type="invalid">
-                            Minimum 6 characters
-                        </Form.Control.Feedback>
+                        </Col>
+                        </Row>
+                        </Form.Group>
                         {!areEqual ? (
                             <small className="invalidMessage">
                             Passwors are different!
@@ -126,7 +128,8 @@ class RegisterPage extends React.Component {
                         ) : (
                             ""
                         )}
-                        </Form.Group>
+                        
+                        
                         <Button
                             variant="secondary"
                             className="loginPage__button"
@@ -138,7 +141,5 @@ class RegisterPage extends React.Component {
         </MenuCard>
     )};
 } 
-
-//RegisterPage.contextType = UserContext;
 
 export default RegisterPage;
