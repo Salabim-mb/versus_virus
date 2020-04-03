@@ -6,15 +6,15 @@ class UserPage extends React.Component {
         super(props);
 
         this.state = {
-
+            username: "",
+            stats: null,
+            current_quests: null
         }
     };
 
     render() {
         return (
-            <MenuCard
-                title="My profile"
-                >
+            <MenuCard title="My profile">
                 My data.
             </MenuCard>
         )
