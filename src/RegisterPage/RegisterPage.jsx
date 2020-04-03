@@ -13,11 +13,11 @@ class RegisterPage extends React.Component {
     redirect: false
   };
 
-  onChange = (e, val) => {
+  onChange = (e) => {
     const value = e.target.value;
 
     this.setState({
-      [val]: value
+      [e.target.name]: value
     });
   };
 
@@ -67,7 +67,8 @@ class RegisterPage extends React.Component {
                                 autoComplete="on"
                                 placeholder="Name"
                                 value={name}
-                                onChange={e => onChange(e, "name")}
+                                name="name"
+                                onChange={e => onChange(e)}
                                 required
                                 minLength="1"
                                 maxLength="30"
@@ -77,16 +78,18 @@ class RegisterPage extends React.Component {
                                 placeholder="Email"
                                 required
                                 value={email}
-                                onChange={e => onChange(e, "email")}
+                                name = "email"
+                                onChange={e => onChange(e)}
                                 className="loginPage__input"
                                 maxLength="50"
                             />
                             <Form.Control
                                 type="text"
-                                placeholder="Nick"
+                                placeholder="Nickname"
                                 required
                                 value={username}
-                                onChange={e => onChange(e, "username")}
+                                name="username"
+                                onChange={e => onChange(e)}
                                 maxLength="50"
                             />
                         </Form.Group>
@@ -96,7 +99,8 @@ class RegisterPage extends React.Component {
                             autoComplete="on"
                             placeholder="Password"
                             value={password}
-                            onChange={e => onChange(e, "password")}
+                            name="password"
+                            onChange={e => onChange(e)}
                             required
                             minLength="6"
                             maxLength="30"
@@ -111,7 +115,8 @@ class RegisterPage extends React.Component {
                             type="password"
                             placeholder="Powtórz hasło"
                             value={passwordR}
-                            onChange={e => onChange(e, "passwordR")}
+                            name="passwordR"
+                            onChange={e => onChange(e)}
                             required
                             minLength="6"
                         />
