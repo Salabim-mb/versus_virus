@@ -1,0 +1,28 @@
+.MenuCard_header {
+    display: block;
+    background-color: #ccaaaa !important;
+}
+
+.MenuCard_body {
+    background-color: rgba(77, 77, 77, 0.5);
+    color: azure;
+}
+
+.MenuBoard_button_close {
+    display: inline-block;
+    justify-self: end !important;
+}
+
+@media(max-width: 768px) {
+    .MenuCard_card {
+        width: 100vw;
+    }
+}
+
+@media(min-width: 768px) {
+    .MenuCard_card {
+        width: 50vw;
+        margin: auto;
+        justify-content: center;
+    }
+}

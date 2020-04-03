@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Card, Form, Button } from "react-bootstrap";
+import MenuCard from "../containers/MenuCard";
 
 class RegisterPage extends React.Component {
   state = {
@@ -50,12 +51,7 @@ class RegisterPage extends React.Component {
     } = this.state;
     const { onChange, handleSubmit } = this;
     return (
-      <Container>
-            <Card>
-                <Card.Header as="h2">
-                    New Account
-                </Card.Header>
-                <Card.Body>
+        <MenuCard title="New Account">
                     <Form
                         noValidate
                         validated={validated}
@@ -139,9 +135,7 @@ class RegisterPage extends React.Component {
                             Create account
                         </Button>
                     </Form>
-                </Card.Body>
-            </Card>
-        </Container>
+        </MenuCard>
     )};
 } 
 
