@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Card, Form, Button } from "react-bootstrap";
-import MenuCard from "../containers/MenuCard";
+import MenuCard from "../../containers/MenuCard";
 
 class RegisterPage extends React.Component {
   state = {
