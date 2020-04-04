@@ -32,3 +32,5 @@ export default [
         exact: true
     }
 ]
+
+export {paths};
