@@ -1,5 +1,6 @@
 import React from "react";
 import {Navbar, Button, Nav} from "react-bootstrap";
+import {UserContext} from "../../context";
 
 class PageNavbar extends React.Component {
     constructor(props){
@@ -10,19 +11,19 @@ class PageNavbar extends React.Component {
     };
 
     renderButtonToolbar = () => {
-      //if (logged in)
+      if (this.context.token !== undefined)
       return (
           <div>
               <Button className="navbar_button pull-left" inline href="/user" variant="outline-light" size="lg">Me</Button>
               <Button className="navbar_button pull-right" inline variant="outline-danger" size="lg">Log out</Button>
           </div>
       );
-      // else return (
-      //       <div>
-      //           <Button className="navbar_button pull-left" inline href="/register" variant="outline-light" size="lg">Register</Button>
-        //               <Button className="navbar_button pull-right" inline href="/login" variant="outline-danger" size="lg">Log in</Button>
-      //       </div>
-      //   );
+      else return (
+            <div>
+                <Button className="navbar_button pull-left" inline href="/register" variant="outline-light" size="lg">Register</Button>
+                      <Button className="navbar_button pull-right" inline href="/login" variant="outline-danger" size="lg">Log in</Button>
+            </div>
+        );
     };
 
     render() {
@@ -44,5 +45,7 @@ class PageNavbar extends React.Component {
         )
     }
 }
+
+PageNavbar.contextType = UserContext;
 
 export default PageNavbar;
