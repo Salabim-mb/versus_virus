@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import MenuCard from "../../containers/MenuCard";
+import {registerUser} from "./functions/submitActions";
 
 class RegisterPage extends React.Component {
   state = {
@@ -24,13 +25,29 @@ class RegisterPage extends React.Component {
 
 
   handleSubmit = event => {
-    if(this.state.password !== this.state.passwordR){
-        this.setState({
-            areEqual: false
-        });
-    }
+      event.preventDefault();
+      const form = event.currentTarget;
 
-    alert(this.state.name);
+      if ( !form.checkValidity() )
+          event.stopPropagation();
+      else if(this.state.password !== this.state.passwordR){
+            this.setState({
+                areEqual: false
+            });
+      } else {
+          const {email, username, password, passwordR} = this.state;
+          const obj = {
+              email: email, username: username, password1: password, password2: passwordR
+          };
+          registerUser(obj).then( response => {
+            const {status} = response;
+            if (status === 200) {
+                console.log("dupa");
+            }
+          });
+      }
+
+        console.log(this.state.name);
   };
 
   setRedirect = () => {
@@ -55,7 +72,7 @@ class RegisterPage extends React.Component {
                     <Form
                         noValidate
                         validated={validated}
-                        onSubmit={handleSubmit}
+                        onSubmit={e => handleSubmit(e)}
                     >
                         <Form.Group controlId="formGroupFirstName" className="">
                             <Form.Control
