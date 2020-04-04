@@ -1,6 +1,12 @@
 import React from "react";
-import {Navbar, Button, Nav} from "react-bootstrap";
+import {Navbar, Button, Nav, Col, Row} from "react-bootstrap";
 import {UserContext} from "../../context";
+import myquests from "../../assets/myquests.png";
+import allquests from "../../assets/allquests.png";
+import shop from "../../assets/shop.png";
+import daily_stats from "../../assets/dailystats.png";
+import main_logo from "../../assets/logo.png";
+import "./PageNavbar.css";
 
 class PageNavbar extends React.Component {
     constructor(props){
@@ -28,14 +34,42 @@ class PageNavbar extends React.Component {
 
     render() {
         return (
-            <Navbar sticky="top" bg="dark" variant="dark" expand="lg" className="navbar">
-                <Navbar.Brand href="/">Home heroes</Navbar.Brand>
+            <Navbar fluid bg="dark" variant="dark" expand="lg" className="navbar">
+                <div>
+                    <Navbar.Brand href="/">
+                        <Row>
+                            {window.innerWidth > 768 ? <img src={main_logo} alt="" width="70" height="70" className="d-inline-block mr-4" /> : <img src={main_logo} alt="" width="40" height="40" className="d-inline-block" /> }
+                            {window.innerWidth > 768 ? <h1 className="align-text-bottom">Home heroes</h1> : <h2>Home heroes</h2>}
+                        </Row>
+                    </Navbar.Brand>
+                </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="navbar_collapse">
                     <Nav className="navbar_menu mr-auto text-center">
-                        <Nav.Link href="/quests" className="navbar_item">My quests</Nav.Link>
-                        <Nav.Link href="/shop" className="navbar_item">Shop</Nav.Link>
-                        <Nav.Link href="/daily" className="navbar_item">Daily summary</Nav.Link>
+                        <Nav.Link href="/myquests" className="navbar_item">
+                            <Col className="menu_block">
+                                <Row><img src={myquests} className="mx-auto d-block" alt=""/></Row>
+                                <Row><p className="mx-auto d-block">My quests</p></Row>
+                            </Col>
+                        </Nav.Link>
+                        <Nav.Link href="/allquests" className="navbar_item">
+                            <Col className="menu_block">
+                                <Row><img src={allquests} className="mx-auto d-block" alt=""/></Row>
+                                <Row><p className="mx-auto d-block">All quests</p></Row>
+                            </Col>
+                        </Nav.Link>
+                        <Nav.Link href="/shop" className="navbar_item">
+                            <Col className="menu_block">
+                                <Row><img src={shop} className="mx-auto d-block" alt=""/></Row>
+                                <Row><p className="mx-auto d-block">Shop</p></Row>
+                            </Col>
+                        </Nav.Link>
+                        <Nav.Link href="/daily" className="navbar_item">
+                            <Col className="menu_block">
+                                <Row><img src={daily_stats} className="mx-auto d-block" alt=""/></Row>
+                                <Row><p className="mx-auto d-block">Daily summary</p></Row>
+                            </Col>
+                        </Nav.Link>
                     </Nav>
                     <div inline className="navbar_button_toolbar">
                         {this.renderButtonToolbar()}

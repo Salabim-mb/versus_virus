@@ -1,0 +1,10 @@
+.navbar {
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .menu_block {
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+}

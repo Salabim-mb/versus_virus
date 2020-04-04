@@ -8,10 +8,10 @@ class MenuCard extends React.Component {
       const {title, children} = this.props;
       return (
           <Container className="MenuCard_container">
-              <Card className="MenuCard_card">
+              <Card className="MenuCard_card mx-auto align-middle px-auto">
                   <Card.Header as="h2" className="MenuCard_header">
                       {title}
-                     <BackButton/>
+                     <BackButton className="float-right"/>
                   </Card.Header>
                   <Card.Body className="MenuCard_body">
                       {children}

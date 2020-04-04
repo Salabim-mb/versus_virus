@@ -6,8 +6,8 @@ import {UserContext} from "../../context";
 const Router = () => {
     const location = useLocation();
     return (
-        // <UserContext.Consumer>
-            () => {
+        <UserContext.Consumer>
+            {value => {
                 return (
                   <Switch location={location} key={location.pathname}>
                       {routes.map(
@@ -21,8 +21,8 @@ const Router = () => {
                       )}
                   </Switch>
                 );
-            }
-        //</UserContext.Consumer>
+            }}
+        </UserContext.Consumer>
     )
 };
 

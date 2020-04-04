@@ -1,5 +1,3 @@
-const LoginPage = null;
-const RegisterPage = null;
-const UserPage = null;
+import UserPage from "./UserPage";
 
-export {LoginPage, RegisterPage, UserPage};
+export { UserPage};
