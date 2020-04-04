@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Button, Nav, Row, Col} from "react-bootstrap";
+import {Navbar, Button, Nav} from "react-bootstrap";
 
 class PageNavbar extends React.Component {
     constructor(props){
@@ -13,8 +13,8 @@ class PageNavbar extends React.Component {
       //if (logged in)
       return (
           <div>
-              <Button className="navbar_button pull-left" inline variant="outline-light" size="lg">Me</Button>
-              <Button className="navbar_button pull-right" inline variant="outline-secondary" size="lg">Log out</Button>
+              <Button className="navbar_button pull-left" inline href="/user" variant="outline-light" size="lg">Me</Button>
+              <Button className="navbar_button pull-right" inline variant="outline-danger" size="lg">Log out</Button>
           </div>
       );
       // else return (
