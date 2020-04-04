@@ -1,8 +1,7 @@
 import React from "react";
 import {Card, Container} from 'react-bootstrap';
 import "./MenuCard.css";
-
-// const BrowserHistory = require('react-router/lib/BrowserHistory').default;
+import BackButton from "../BackButton";
 
 class MenuCard extends React.Component {
   render() {
@@ -12,7 +11,7 @@ class MenuCard extends React.Component {
               <Card className="MenuCard_card">
                   <Card.Header as="h2" className="MenuCard_header">
                       {title}
-                      {/*<Button variant="danger" className="MenuCard_button_close" onClick={BrowserHistory.goBack}>X</Button>*/}
+                     <BackButton/>
                   </Card.Header>
                   <Card.Body className="MenuCard_body">
                       {children}
