@@ -19,8 +19,8 @@ class PageNavbar extends React.Component {
       );
       // else return (
       //       <div>
-      //           <Button variant="outline-light" >Register</Button>
-      //           <Button variant="outline-secondary" >Log in</Button>
+      //           <Button className="navbar_button pull-left" inline href="/register" variant="outline-light" size="lg">Register</Button>
+        //               <Button className="navbar_button pull-right" inline href="/login" variant="outline-danger" size="lg">Log in</Button>
       //       </div>
       //   );
     };
