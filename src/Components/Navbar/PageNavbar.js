@@ -6,7 +6,7 @@ import allquests from "../../assets/allquests.png";
 import shop from "../../assets/shop.png";
 import daily_stats from "../../assets/dailystats.png";
 import main_logo from "../../assets/logo.png";
-import NavbarContext from "react-bootstrap/cjs/NavbarContext";
+import "./PageNavbar.css";
 
 class PageNavbar extends React.Component {
     constructor(props){
@@ -35,10 +35,10 @@ class PageNavbar extends React.Component {
     render() {
         return (
             <Navbar fluid bg="dark" variant="dark" expand="lg" className="navbar">
-                <div className="mr-4">
+                <div>
                     <Navbar.Brand href="/">
                         <Row>
-                            {window.innerWidth > 768 ? <img src={main_logo} alt="" width="70" height="70" className="d-inline-block" /> : <img src={main_logo} alt="" width="40" height="40" className="d-inline-block" /> }
+                            {window.innerWidth > 768 ? <img src={main_logo} alt="" width="70" height="70" className="d-inline-block mr-4" /> : <img src={main_logo} alt="" width="40" height="40" className="d-inline-block" /> }
                             {window.innerWidth > 768 ? <h1 className="align-text-bottom">Home heroes</h1> : <h2>Home heroes</h2>}
                         </Row>
                     </Navbar.Brand>
@@ -47,25 +47,25 @@ class PageNavbar extends React.Component {
                 <Navbar.Collapse className="navbar_collapse">
                     <Nav className="navbar_menu mr-auto text-center">
                         <Nav.Link href="/myquests" className="navbar_item">
-                            <Col className="mx-5">
+                            <Col className="menu_block">
                                 <Row><img src={myquests} className="mx-auto d-block" alt=""/></Row>
                                 <Row><p className="mx-auto d-block">My quests</p></Row>
                             </Col>
                         </Nav.Link>
                         <Nav.Link href="/allquests" className="navbar_item">
-                            <Col className="mx-5">
+                            <Col className="menu_block">
                                 <Row><img src={allquests} className="mx-auto d-block" alt=""/></Row>
                                 <Row><p className="mx-auto d-block">All quests</p></Row>
                             </Col>
                         </Nav.Link>
                         <Nav.Link href="/shop" className="navbar_item">
-                            <Col className="mx-5">
+                            <Col className="menu_block">
                                 <Row><img src={shop} className="mx-auto d-block" alt=""/></Row>
                                 <Row><p className="mx-auto d-block">Shop</p></Row>
                             </Col>
                         </Nav.Link>
                         <Nav.Link href="/daily" className="navbar_item">
-                            <Col className="mx-5">
+                            <Col className="menu_block">
                                 <Row><img src={daily_stats} className="mx-auto d-block" alt=""/></Row>
                                 <Row><p className="mx-auto d-block">Daily summary</p></Row>
                             </Col>

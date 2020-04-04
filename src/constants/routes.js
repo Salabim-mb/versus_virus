@@ -1,4 +1,4 @@
-import {LoginPage, RegisterPage, UserPage} from "../Components";
+import {UserPage} from "../Components";
 
 const paths = {
     DASHBOARD: "/",
@@ -18,12 +18,12 @@ export default [
     },
     {
         path: paths.LOGIN,
-        component: LoginPage,
+        //component: LoginPage,
         exact: true
     },
     {
         path: paths.REGISTER,
-        component: RegisterPage,
+        //component: RegisterPage,
         exact: true
     },
     {

@@ -1,6 +1,7 @@
 #root {
     height: 100vh;
     background: linear-gradient(135deg, #ecde17, #dd8b03, #f32200) center center fixed !important;
+
     background-size: cover;
 
     -webkit-animation: AnimationName 15s ease infinite;

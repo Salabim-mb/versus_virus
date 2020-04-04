@@ -4,13 +4,18 @@
 }
 
 .MenuCard_body {
-    background-color: rgba(77, 77, 77, 0.5);
+    background-color: #282c34cc;
     color: azure;
 }
 
 .MenuBoard_button_close {
-    display: inline-block;
-    justify-self: end !important;
+    /*display: inline-block;*/
+    /*justify-self: end !important;*/
+}
+
+.MenuCard_container.container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media(max-width: 768px) {
